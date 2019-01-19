@@ -1,0 +1,48 @@
+body.modal-open {
+    overflow: hidden;
+}
+
+#popup {
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5100;
+
+    /*   Added */
+    visibility: hidden;
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        z-index: 99999;
+    }
+
+
+
+    .videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        /* 16:9 */
+        padding-top: 25px;
+        height: 0;
+
+        iframe {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            /*   Added */
+            visibility: hidden;
+            width: 70%;
+            height: 70%;
+        }
+    }
+
+
+}

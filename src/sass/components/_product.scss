@@ -1,0 +1,164 @@
+.product {
+
+    position: relative;
+
+    &__box {
+        height: 68rem;
+        width: 30.2rem;
+
+        @include respond(phone) {
+            height: 60rem;
+        }
+
+        .wishlist-icon {
+            position: absolute;
+            right: 0;
+            padding: 1rem;
+        }
+    }
+
+    &__img {
+        height: 38rem;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.4rem;
+        top: 0;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        font-family: 'AvanteInt', sans-serif;
+        font-weight: 800;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        line-height: 3.2rem;
+
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+
+        height: 14.4rem;
+    }
+
+    &__top-panel {
+        height: 60rem;
+        background: $color-grey;
+        position: relative;
+        top: 0;
+
+        @include respond(phone) {
+            height: 52rem;
+        }
+    }
+
+    &__bottom-panel {
+        position: relative;
+        top: -8rem;
+
+        @include respond(phone) {
+            top: -5rem;
+        }
+
+        .btn--playsharp {
+            position: absolute;
+            top: 0;
+            right: -7.5rem;
+        }
+    }
+
+    &__compare-panel {
+
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+
+        position: absolute;
+        width: 100%;
+        background: #292929d6;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        height: 60rem;
+
+        .btn--playsharp {
+            margin-top: 0.1rem;
+            right: auto;
+            bottom: 0;
+            position: relative;
+            text-align: left;
+            float: left;
+
+            span {
+                max-width: 10.7rem;
+                display: inline-block;
+                float: left;
+                text-align: left;
+            }
+
+            .icon-right-sharp {
+                margin-left: -0.5rem;
+                ;
+            }
+        }
+    }
+
+    &__comment {
+        //position: absolute;
+        top: 0;
+
+        font-family: 'AvanteTck', sans-serif;
+        font-weight: 500;
+        font-size: 1.8rem;
+        max-width: 16rem;
+        line-height: 2.6rem;
+
+        margin-left: 2.5rem;
+
+
+    }
+
+
+    .slick-slide {
+        width: 37.7rem;
+        opacity: 0.4;
+        transition: all .4s;
+
+
+        .product__box {
+            .product__comment {
+                height: 8rem;
+                overflow: hidden;
+                transition: all .4s;
+
+                @include respond(phone) {
+                    height: 5rem;
+                }
+            }
+        }
+
+        &.slick-active {
+            opacity: 1;
+
+            .product__box {
+                .product__comment {
+                    height: inherit;
+                    overflow: inherit;
+                }
+            }
+        }
+    }
+
+    .slider-control {
+        bottom: 3rem;
+
+        @include respond(phone) {
+            bottom: 5rem;
+        }
+    }
+}

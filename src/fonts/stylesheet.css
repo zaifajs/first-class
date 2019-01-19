@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'a_AvanteInt';
+    src: url('AAvanteIntBold.woff2') format('woff2'),
+        url('AAvanteIntBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'a_AvanteBs';
+    src: url('AAvanteBsExtraBold.woff2') format('woff2'),
+        url('AAvanteBsExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'a_AvanteTck';
+    src: url('AAvanteTckMedium.woff2') format('woff2'),
+        url('AAvanteTckMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('ProximaNova-Bold.woff2') format('woff2'),
+        url('ProximaNova-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+

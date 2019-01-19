@@ -1,0 +1,42 @@
+/* ====================================
+TYPOGRAPHY  */
+
+@font-face {
+  font-family: 'AvanteInt';
+  src: url('../fonts/AAvanteIntBold.woff2') format('woff2'), url('../fonts/AAvanteIntBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvanteBs';
+  src: url('../fonts/AAvanteBsExtraBold.woff2') format('woff2'),
+    url('../fonts/AAvanteBsExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvanteTck';
+  src: url('../fonts/AAvanteTckMedium.woff2') format('woff2'), url('../fonts/AAvanteTckMedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Rg';
+  src: url('../fonts/ProximaNova-Bold.woff2') format('woff2'), url('../fonts/ProximaNova-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-size: 1.6rem;
+  color: $color-black;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: $color-black;
+}

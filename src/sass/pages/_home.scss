@@ -1,0 +1,441 @@
+.intro {
+    &__wrapper {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    width: 100vw;
+    height: 82vh;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    margin-bottom: 10vh;
+
+    @include respond(big-desktop) {
+        height: 85vh;
+    }
+
+    @include respond(tab-land) {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    @include respond(phone) {
+        height: 60vh;
+    }
+
+    &__img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        animation: fade-slide-down 2s .2s cubic-bezier(0, 0.5, 0, 1) forwards;
+        transition: all 0.2s ease-in-out;
+
+        @include respond(phone) {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__details {
+        @include abscentre;
+        top: auto;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+        transform: translateX(-50%);
+    }
+
+    &__name {
+        font-family: 'AvanteInt', sans-serif;
+        font-size: 2.8rem;
+        line-height: 4rem;
+        letter-spacing: 0.4rem;
+        color: $color-white;
+        opacity: 0;
+        animation: fadeIn 1s .4s forwards;
+
+        @include respond(phone) {
+            font-size: 2rem;
+        }
+    }
+
+    &__title {
+        font-family: 'AvanteInt', sans-serif;
+        display: block;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        letter-spacing: 1rem;
+        color: $color-light;
+
+        @include respond(phone) {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__slogan {
+        &__container {
+            font-size: 0;
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 0.4rem;
+            margin: 2rem 0;
+        }
+
+        font-family: 'AvanteInt',
+        sans-serif;
+        font-size: 8rem;
+        color: $color-white;
+        letter-spacing: 0.1rem;
+        bottom: 0;
+        display: block;
+        line-height: 1;
+        transform: translateY(6rem);
+        opacity: 0;
+        animation: up 500ms .4s linear forwards;
+
+        @include respond(phone) {
+            font-size: 4rem;
+            margin-bottom: 0;
+        }
+    }
+
+    .btn--play {
+        top: 3.5rem;
+        position: relative;
+        opacity: 0;
+        animation: fadeScale 1s .4s forwards;
+
+        @include respond(phone) {
+            top: 2rem;
+        }
+    }
+}
+
+.about {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    display: flex;
+
+    @include respond(phone) {
+        flex-wrap: wrap;
+    }
+
+    &__meta {
+        flex: 0 0 30.6rem;
+        margin-right: 9.5rem;
+
+        @include respond(tab-port) {
+            margin-right: 6.5rem;
+        }
+
+        @include respond(phone) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__caption {
+        font-family: 'AvanteInt', sans-serif;
+        font-size: 2.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        margin-bottom: 5rem;
+
+        span {
+            display: block;
+            font-size: 1.4rem;
+            letter-spacing: 0.8rem;
+            color: $color-light;
+        }
+    }
+
+    &__quote {
+        position: relative;
+        max-width: 80.7rem;
+        width: 100%;
+        overflow: hidden;
+
+        &__img {
+            position: absolute;
+            z-index: -1;
+            max-height: 63.2rem;
+            max-width: 100%;
+
+            @include respond(phone) {
+                top: 1rem;
+            }
+        }
+
+        &--big {
+            font-family: 'AvanteInt', sans-serif;
+            font-weight: 800;
+            font-size: 5.4rem;
+            letter-spacing: 0.2rem;
+            position: relative;
+            max-width: 50rem;
+            margin: 0 auto;
+            line-height: 6.4rem;
+            text-align: center;
+            margin-top: 18rem;
+            margin-bottom: 12rem;
+
+            @include respond(tab-port) {
+                font-size: 4.5rem;
+                line-height: 4rem;
+                margin-top: 8rem;
+                margin-bottom: 8rem;
+            }
+
+            &::before,
+            &::after {
+                font-family: 'AvanteTck', sans-serif;
+                font-size: 18rem;
+                position: absolute;
+                display: block;
+                font-weight: 500;
+
+                @include respond(tab-port) {
+                    font-size: 12rem;
+                }
+            }
+
+            &::before {
+                content: '“';
+                left: -4rem;
+
+                @include respond(tab-port) {
+                    top: -1rem;
+                    left: 0;
+                }
+            }
+
+            &::after {
+                content: '”';
+                right: -4rem;
+
+                @include respond(tab-port) {
+                    right: 0;
+                }
+            }
+        }
+
+        &--small {
+            font-family: 'AvanteInt', sans-serif;
+            font-weight: 800;
+            font-size: 2rem;
+            letter-spacing: 0.2rem;
+            line-height: 3rem;
+            max-width: 70rem;
+
+            @include respond(phone) {
+                line-height: 2.5rem;
+            }
+        }
+    }
+}
+
+.product {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    padding-right: 0;
+    margin-right: 0;
+    width: 100%;
+
+    &__sub-title {
+        @include subtitle;
+    }
+}
+
+.gallery {
+    background: $color-black;
+    margin: 3rem 0;
+    padding: 8rem 0;
+
+    @include respond(phone) {
+        padding: 6rem 0;
+    }
+
+    &__carousel {
+        max-width: 50%;
+
+        @include respond(phone) {
+            max-width: 100%;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+
+        @include respond(phone) {
+            flex-wrap: wrap;
+            max-width: 100%;
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex: 1 1 50%;
+        max-width: 50%;
+
+        @include respond(phone) {
+            flex-wrap: wrap;
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        font-family: 'AvanteInt', sans-serif;
+        font-weight: 800;
+        font-size: 6.2rem;
+        letter-spacing: 0.06rem;
+        line-height: 6rem;
+        color: $color-white;
+        @include abscentre;
+        top: 46%;
+
+        @include respond(tab-land) {
+            font-size: 4rem;
+            line-height: 4rem;
+        }
+
+        @include respond(phone) {
+            font-size: 6.2rem;
+            line-height: 5.2rem;
+        }
+    }
+
+    &__single {
+        flex: 1 1 50%;
+        max-height: 28rem;
+        position: relative;
+
+        @include respond(tab-land) {
+            flex: 1 1 30rem;
+            min-height: 5rem;
+        }
+
+        // background: blue;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .link-gallery {
+            color: $color-white;
+            position: absolute;
+            bottom: 0;
+
+            @include respond(tab-land) {
+                bottom: 0.5rem;
+            }
+
+            &::before {
+                background: $color-white;
+            }
+
+            &::after {
+                background: $color-white;
+            }
+        }
+
+        .btn--playsharp {
+            height: 4rem;
+            position: absolute;
+            right: -8rem;
+            bottom: 0;
+            z-index: 1;
+
+            @include respond(phone) {
+                right: 0;
+            }
+        }
+
+        .play-icon {
+            @include abscentre;
+
+            svg path {
+                transition: all .3s;
+            }
+
+            &:hover svg path {
+                fill: $color-black;
+
+            }
+        }
+    }
+
+    &__sub-title {
+        @include subtitle;
+        color: $color-white;
+    }
+}
+
+footer {
+    .share {
+        padding-top: 8rem;
+        padding-bottom: 10rem;
+
+        &__wrapper {
+            text-align: center;
+        }
+
+        .vertline {
+            display: block;
+            height: 8rem;
+            width: 0.2rem;
+            background: $color-black;
+            margin: 0 auto;
+            margin-bottom: 1.6rem;
+        }
+
+        &__text {
+            font-family: 'AvanteBs', sans-serif;
+            font-weight: 800;
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            letter-spacing: 0.3rem;
+            display: block;
+        }
+
+        &__icons {
+            list-style: none;
+            margin-top: 7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            li {
+                align-self: auto;
+                margin: 0 2.2rem;
+                display: inline-block;
+
+
+                a {
+
+                    svg,
+                    g {
+                        transition: all .1s;
+                    }
+
+                    &:hover {
+                        svg {
+                            fill: $color-primary;
+
+                            g {
+                                stroke: $color-primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

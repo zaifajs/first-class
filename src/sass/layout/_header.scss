@@ -1,0 +1,121 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    max-width: 100%;
+    margin: 0 auto;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background: $color-white;
+
+    position: sticky;
+    top: 0;
+    z-index: 1600;
+
+    opacity: 0;
+
+    animation: header-translate 1s .1s ease forwards;
+
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+    }
+
+    &.scale {
+        box-shadow: 1px 0px 12px 0px #00000014;
+
+        .header__logo {
+            height: 6.5rem;
+
+            img {
+                height: 6.5rem;
+            }
+        }
+    }
+
+    &__logo {
+        transition: all .4s ease;
+        align-self: center;
+        height: 8rem;
+
+        img {
+            transition: all .4s ease;
+            height: 8rem;
+        }
+    }
+
+    .navigation {
+        display: flex;
+        align-self: flex-end;
+
+        &__list {
+            list-style: none;
+        }
+
+        &__item {
+            display: inline-block;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+
+            a {
+
+                &:hover,
+                &:focus {
+                    outline: none;
+                }
+
+                font-family: 'AvanteInt',
+                sans-serif;
+                font-weight: bold;
+                font-size: 1.1rem;
+                letter-spacing: 0.1rem;
+
+                position: relative;
+                display: inline-block;
+                outline: none;
+                text-decoration: none;
+                text-transform: uppercase;
+                text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+
+                overflow: hidden;
+                padding: 0 4px;
+                height: 1.1em;
+
+
+                span {
+                    position: relative;
+                    display: inline-block;
+                    -webkit-transition: -webkit-transform 0.3s;
+                    -moz-transition: -moz-transform 0.3s;
+                    transition: transform 0.3s;
+                }
+
+                span::before {
+                    position: absolute;
+                    top: 100%;
+                    content: attr(data-hover);
+                    font-weight: 700;
+                    -webkit-transform: translate3d(0, 0, 0);
+                    -moz-transform: translate3d(0, 0, 0);
+                    transform: translate3d(0, 0, 0);
+                }
+
+                &:hover span,
+                &:focus span {
+                    -webkit-transform: translateY(-100%);
+                    -moz-transform: translateY(-100%);
+                    transform: translateY(-100%);
+                }
+            }
+        }
+
+        &__icon {
+            padding-left: 1.5rem;
+        }
+    }
+}

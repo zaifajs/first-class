@@ -1,0 +1,50 @@
+.testimonial {
+    padding-top: 7rem;
+
+    &__wrapper {
+        background: #F4D5D3;
+        padding: 8rem 6rem 8rem 8rem;
+
+        @include respond(phone) {
+            padding: 4rem 3rem 4rem 4rem;
+        }
+    }
+
+
+    &__img {
+        max-width: 24rem;
+        margin-right: 7rem;
+    }
+
+    &__single {
+        &.slick-slide {
+            display: flex;
+
+            @include respond(phone) {
+                flex-wrap: wrap;
+                /*  justify-content: center;
+                text-align: center; */
+            }
+        }
+    }
+
+    &__quote {
+        font-family: 'AvanteInt', sans-serif;
+        font-weight: 800;
+        font-size: 2.4rem;
+        letter-spacing: 0.18rem;
+        line-height: 3.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        @include respond(phone) {
+            padding-top: 2rem;
+        }
+    }
+
+    &__author {
+        display: block;
+        padding-top: 4rem;
+    }
+}

@@ -1,0 +1,22 @@
+.row {
+    max-width: $grid-width;
+    margin: 0 auto;
+    padding-left: $grid-pd-horizontal;
+    padding-right: $grid-pd-horizontal;
+
+
+
+    &.fluid-right {
+        padding-right: 0;
+        margin-right: 0;
+        margin: auto;
+    }
+
+    @include respond(tab-land) {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    @include clearfix;
+
+}

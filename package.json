@@ -1,0 +1,19 @@
+{
+  "name": "test-project",
+  "version": "v1.0.0",
+  "description": "frontend test project",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-fontmin": "^0.7.4",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify-es": "^1.0.4"
+  },
+  "dependencies": {
+    "aos": "^2.3.3",
+    "gsap": "^2.0.2"
+  }
+}
