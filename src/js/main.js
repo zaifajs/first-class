@@ -2,6 +2,7 @@
 var $product = $(".product");
 var $gallery = $(".gallery");
 var $testimonial = $(".testimonial__wrapper");
+var $footer = $("footer");
 
 var $popup = $("#popup");
 
@@ -186,6 +187,14 @@ TweenMax.set($('.testimonial__img, .testimonial__quote'), {
     y: 100,
     autoAlpha: 0
 });
+TweenMax.set($('.vertline'), {
+    y: -100,
+    autoAlpha: 0
+});
+TweenMax.set($('.share__text'), {
+    y: 100,
+    autoAlpha: 0
+});
 
 //  trigger compare button functions
 $('.product__box').each(function (index, element) {
@@ -263,7 +272,7 @@ $(window).scroll(function () {
         var tl = new TimelineLite();
         $('.gallery__single').each(function (index, element) {
             var child = new TimelineLite();
-            child.to(element, 0.2, {
+            child.to(element, 0.3, {
                 opacity: 1,
                 autoAlpha: 1,
             })
@@ -286,7 +295,19 @@ $(window).scroll(function () {
             y: 0,
             autoAlpha: 1,
         })
+    };
+    // animate testimonial items on viewport
+    if (verge.inViewport($footer, -150) && !$footer.hasClass("js-inviewport")) {
+        $footer.addClass('js-inviewport');
 
+        TweenMax.to($('.vertline'), 1, {
+            y: 0,
+            autoAlpha: 1,
+        })
+        TweenMax.to($('.share__text'), 1, {
+            y: 0,
+            autoAlpha: 1,
+        })
     };
 
 });
